@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezekaj <ezekaj@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ezekaj <ezekaj@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 14:36:18 by ezekaj            #+#    #+#             */
-/*   Updated: 2025/02/08 18:28:58 by ezekaj           ###   ########.fr       */
+/*   Updated: 2025/04/19 17:57:35 by ezekaj           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	create_list(char **buffer, size_t fd)
 			return ;
 		}
 		list[chars_read] = '\0';
-		ft_strjoin(buffer, list);
+		ft_strjoin(*buffer, list);
 		free(list);
 	}
 }
