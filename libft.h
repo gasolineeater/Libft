@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezekaj <ezekaj@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ezekaj <ezekaj@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:36:59 by ezekaj            #+#    #+#             */
-/*   Updated: 2024/11/11 17:22:06 by ezekaj           ###   ########.fr       */
+/*   Updated: 2025/04/19 17:40:43 by ezekaj           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,13 @@
 # include <ctype.h>
 # include <xlocale.h>
 # include <stdbool.h>
+# include <fcntl.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+// LIBFT
 int		ft_isalpha(int a);
 int		ft_isdigit(int nb);
 int		ft_isalnum(int c);
@@ -61,5 +67,19 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+// Printf functions
+int		ft_printf(const char *form, ...);
+int		print_char(int c);
+int		print_str(char *s);
+int		print_digit(long num, int base, int x);
+int		print_form(char specifier, va_list ap);
+int		print_udigit(unsigned long num, unsigned int base);
+
+// Get Next Line functions
+char	*get_next_line(int fd);
+char	*ft_get_line(char **buffer);
+char	*ft_strjoin_gnl(char **buffer, char *list);
+void	create_list(char **buffer, size_t fd);
 
 #endif

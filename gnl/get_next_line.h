@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezekaj <ezekaj@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ezekaj <ezekaj@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:59:28 by ezekaj            #+#    #+#             */
-/*   Updated: 2025/02/08 18:30:56 by ezekaj           ###   ########.fr       */
+/*   Updated: 2025/04/19 17:44:19 by ezekaj           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <stdio.h>
+# include "../libft.h"
 
 char	*get_next_line(int fd);
 char	*ft_strchr(char *s, size_t c);
